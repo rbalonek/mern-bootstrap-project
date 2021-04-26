@@ -1,9 +1,24 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-export default function Nav() {
+const Nav = () => {
   return (
-    <div syle={{ height: "50vh" }}>
-      <p>NAV</p>
-    </div>
+    <nav>
+      <div className="nav">
+        <NavLink className="logo" to="/">
+          ProductsApp
+        </NavLink>
+        <div className="links">
+          <NavLink className="link" to="/products">
+            Products
+          </NavLink>
+          <NavLink className="link" to="/add-product">
+            Add Product
+          </NavLink>
+        </div>
+      </div>
+    </nav>
   );
-}
+};
+
+export default Nav;
