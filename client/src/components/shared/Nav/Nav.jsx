@@ -4,15 +4,18 @@ import { NavLink } from "react-router-dom";
 const Nav = () => {
   return (
     <nav>
-      <div className="nav">
-        <NavLink className="logo" to="/">
-          ProductsApp
-        </NavLink>
-        <div className="links">
-          <NavLink className="link" to="/products">
-            Products
-          </NavLink>
-          <NavLink className="link" to="/add-product">
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          width: "100vw",
+          justifyContent: "space-around",
+        }}
+      >
+        <NavLink to="/">ProductsApp</NavLink>
+        <div>
+          <NavLink to="/products">Products</NavLink>
+          <NavLink style={{ paddingLeft: "40px" }} to="/add-product">
             Add Product
           </NavLink>
         </div>

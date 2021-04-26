@@ -1,9 +1,14 @@
 import React from "react";
+import Layout from "../../components/shared/Layout/Layout";
 
-export default function Home() {
+const Home = () => {
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+    <Layout>
+      <div className="home">
+        <h1>Home</h1>
+      </div>
+    </Layout>
   );
-}
+};
+
+export default Home;
