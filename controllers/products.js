@@ -1,4 +1,4 @@
-const Product = require("../models/product");
+const Product = require("../models/Product");
 const db = require("../connection/db");
 
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
