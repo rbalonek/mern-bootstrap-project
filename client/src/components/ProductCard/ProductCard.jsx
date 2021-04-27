@@ -1,19 +1,30 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Card, Button } from "react-bootstrap";
 
 const ProductCard = (props) => {
   return (
-    <div style={{ width: "150px" }}>
-      <Link to={`/products/${props._id}`}>
-        <img
-          style={{ height: "100px", width: "100px" }}
-          src={props.imgURL}
-          alt={props.name}
-        />
-        <div>View</div>
-      </Link>
-    </div>
+    <Card border="primary" style={{ width: "12rem" }} class="shadow p-3 m-2">
+      <Card.Img variant="top" src={props.imgURL} />
+      <Card.Body class="p-2">
+        <Card.Title>{props.name}</Card.Title>
+        <Card.Text>${props.price}</Card.Text>
+        <Button href={`/products/${props._id}`} variant="primary">
+          View
+        </Button>
+      </Card.Body>
+    </Card>
   );
 };
 
 export default ProductCard;
+
+// <div style={{ width: "150px" }}>
+//       <Link to={`/products/${props._id}`}>
+//         <img
+//           style={{ height: "100px", width: "100px" }}
+//           src={props.imgURL}
+//           alt={props.name}
+//         />
+//         <div>View</div>
+//       </Link>
+//     </div>

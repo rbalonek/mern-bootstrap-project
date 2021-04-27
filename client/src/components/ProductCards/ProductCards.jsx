@@ -25,15 +25,27 @@ class ProductCards extends Component {
             name={product.name}
             imgURL={product.imgURL}
             key={index}
+            price={product.price}
           />
         ) : null
       );
 
     return (
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          marginBottom: "100px",
+        }}
+      >
         <div className="latest">LATEST</div>
         <div
-          style={{ display: "flex", flexDirection: "row" }}
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap",
+            justifyContent: "center",
+          }}
           className="cards"
         >
           {CARDS}
