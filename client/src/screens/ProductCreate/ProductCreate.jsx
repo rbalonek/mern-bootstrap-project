@@ -37,9 +37,9 @@ const ProductCreate = (props) => {
       <Jumbotron fluid className="p-1">
         <h1 className="font-weight-light">New Product</h1>
       </Jumbotron>
-      <div className="mt-5">
+      <div className="mt-5 mb-5">
         <Card>
-          <Card.Body>
+          <Card.Body className="mb-5">
             <Form onSubmit={handleSubmit}>
               <Form.Group>
                 <Form.Label>Name</Form.Label>

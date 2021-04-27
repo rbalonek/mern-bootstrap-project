@@ -43,7 +43,7 @@ const ProductDetail = (props) => {
         </Button>
       </Modal>
 
-      <div style={{ marginTop: "50px" }}>
+      <div style={{ marginTop: "50px", marginBottom: "100px" }}>
         <div>
           <div className="d-flex flex-row-reverse justify-content-around ">
             <Image

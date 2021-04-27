@@ -48,7 +48,7 @@ const ProductEdit = (props) => {
       <Jumbotron fluid className="p-1">
         <h1 className="font-weight-light">Edit Product</h1>
       </Jumbotron>
-      <div className="mt-5">
+      <div className="mt-5 mb-5">
         <Card>
           <Card.Body>
             <Form onSubmit={handleSubmit}>
@@ -107,7 +107,11 @@ const ProductEdit = (props) => {
                 />
               </Form.Group>
 
-              <Button variant="primary" type="submit">
+              <Button
+                className="d-sm mt-1 mb-5"
+                variant="primary"
+                type="submit"
+              >
                 Submit
               </Button>
             </Form>
