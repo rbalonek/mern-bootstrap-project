@@ -29,24 +29,24 @@ const ProductDetail = (props) => {
 
   return (
     <Layout>
-      <div
-      // style={{ marginTop: "50px" }}
-      >
+      <div style={{ marginTop: "50px" }}>
         <div>
-          <div className="d-flex flex-row">
+          <div className="d-flex flex-row-reverse justify-content-around ">
             <Image
               fluid
               rounded
-              style={{ height: "150px" }}
+              style={{ height: "200px" }}
               src={product.imgURL}
               alt={product.name}
             />
-            <div>{product.name}</div>
-            <div>{`$${product.price}`}</div>
+            <div className="d-flex flex-column justify-content-center ">
+              <h2>{product.name}</h2>
+              <h4 className=" text-success">{`$${product.price}`}</h4>
+            </div>
           </div>
 
           <div className="d-flex flex-column">
-            <div>{product.description}</div>
+            <p className="font-weight-light p-4">{product.description}</p>
             <div>
               {loggedIn ? (
                 <>

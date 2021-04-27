@@ -36,9 +36,7 @@ function App() {
         <Route path="/add-product">
           <ProductCreate isLoggedIn={isLoggedIn} />
         </Route>
-        <Route exact path="/products/:id/edit">
-          <ProductEdit isLoggedIn={isLoggedIn} />
-        </Route>
+        <Route exact path="/products/:id/edit" component={ProductEdit} />
 
         <Route exact path="/products/:id">
           <ProductDetail
