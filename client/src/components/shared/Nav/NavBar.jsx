@@ -1,6 +1,5 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
-import { Nav, Navbar, Button, FormControl, Form } from "react-bootstrap";
+import { Nav, Navbar, Form } from "react-bootstrap";
 
 const NavBar = ({ handleChangeLogin, handleChangeLogout, isLoggedIn }) => {
   //console.log("Logged in? ", isLoggedIn);

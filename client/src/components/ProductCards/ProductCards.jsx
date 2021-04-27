@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ProductCard from "../ProductCard/ProductCard";
 import { getProducts } from "../../services/products";
+import { Jumbotron } from "react-bootstrap";
 
 class ProductCards extends Component {
   constructor() {
@@ -41,7 +42,10 @@ class ProductCards extends Component {
           marginBottom: "100px",
         }}
       >
-        <div className="latest">LATEST</div>
+        <Jumbotron className="p-1">
+          <h1 className="font-weight-light">LATEST</h1>
+        </Jumbotron>
+
         <div
           style={{
             display: "flex",

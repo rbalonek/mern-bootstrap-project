@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Product from "../../components/Product/Product";
 import Layout from "../../components/shared/Layout/Layout";
 import { getProducts } from "../../services/products";
+import { Jumbotron } from "react-bootstrap";
 
 export default function Products(props) {
   const [allProducts, setAllProducts] = useState([]);
@@ -29,7 +30,9 @@ export default function Products(props) {
   return (
     <div>
       <Layout>
-        <h1>All The Products</h1>
+        <Jumbotron className="p-1">
+          <h1 className="font-weight-light">All The Products</h1>
+        </Jumbotron>
         <div
           style={{
             marginTop: "10px",
