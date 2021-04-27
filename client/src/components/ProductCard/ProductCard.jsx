@@ -3,9 +3,13 @@ import { Card, Button } from "react-bootstrap";
 
 const ProductCard = (props) => {
   return (
-    <Card border="primary" style={{ width: "12rem" }} class="shadow p-3 m-2">
+    <Card
+      border="primary"
+      style={{ width: "12rem" }}
+      className="shadow p-2 m-2"
+    >
       <Card.Img variant="top" src={props.imgURL} />
-      <Card.Body class="p-2">
+      <Card.Body className="p-2">
         <Card.Title>{props.name}</Card.Title>
         <Card.Text>${props.price}</Card.Text>
         <Button href={`/products/${props._id}`} variant="primary">
