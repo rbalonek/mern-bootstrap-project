@@ -6,12 +6,12 @@ const ProductCard = (props) => {
   return (
     <Card
       border="danger bg-dark"
-      style={{ width: "12rem" }}
-      className="shadow p-2 m-2"
+      //style={{ width: "12rem" }}
+      className="shadow p-2 m-2 card-width-all-products"
     >
       <Card.Img variant="top" src={props.imgURL} />
       <Card.Body className="p-2">
-        <Card.Title className="font-weight-bold text-light">
+        <Card.Title className=" font-weight-bold text-light">
           {props.name}
         </Card.Title>
         <Card.Text className="font-italic text-success ">

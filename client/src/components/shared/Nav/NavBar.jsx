@@ -1,17 +1,33 @@
-import React from "react";
-import { Nav, Navbar, Form } from "react-bootstrap";
+import React, { useState } from "react";
+import { Nav, Navbar, Button } from "react-bootstrap";
 
-const NavBar = ({ handleChangeLogin, handleChangeLogout, isLoggedIn }) => {
+const NavBar = (props) => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   //console.log("Logged in? ", isLoggedIn);
+
   return (
     <div className="sticky-top ">
       <Navbar bg="dark" variant="dark">
         <Navbar.Brand href="/">Home</Navbar.Brand>
+
         <Nav className="mr-auto">
           <Nav.Link href="/products">All Products</Nav.Link>
-          <Nav.Link href="/add-product">Add Product</Nav.Link>
+          {isLoggedIn ? (
+            <>
+              <Nav.Link className="float-right" href="/add-product">
+                Add Product
+              </Nav.Link>
+              <Button
+                className="btn btn-dark btn-outline-danger"
+                onClick={() => setIsLoggedIn(false)}
+              >
+                Logout
+              </Button>
+            </>
+          ) : (
+            <Button onClick={() => setIsLoggedIn(true)}>Login</Button>
+          )}
         </Nav>
-        <Form inline></Form>
       </Navbar>
     </div>
   );

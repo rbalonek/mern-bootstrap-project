@@ -4,7 +4,7 @@ import { Form } from "react-bootstrap";
 const Search = (props) => {
   return (
     <Form
-      className="w-50 mt-n2 float-right"
+      className="w-50 mt-n2 float-right mr-2"
       onSubmit={(e) => props.onSubmit(e)}
     >
       <Form.Control

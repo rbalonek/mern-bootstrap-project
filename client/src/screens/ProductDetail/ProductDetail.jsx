@@ -60,7 +60,9 @@ const ProductDetail = (props) => {
           </div>
 
           <div className="d-flex flex-column">
-            <p className="font-weight-light p-4">{product.description}</p>
+            <p className="smaller-description-text-cell font-weight-light p-4">
+              {product.description}
+            </p>
             <div>
               {loggedIn ? (
                 <>

@@ -6,8 +6,8 @@ export default function Product(props) {
     <div>
       <Card
         border="danger bg-dark"
-        style={{ width: "12rem" }}
-        className="shadow p-2 m-2"
+        //style={{ width: "12rem" }}
+        className="shadow p-2 m-2 card-width-all-products"
       >
         <Card.Img variant="top" src={props.imgURL} />
         <Card.Body className="p-2">
