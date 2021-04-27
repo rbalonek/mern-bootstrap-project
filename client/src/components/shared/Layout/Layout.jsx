@@ -1,11 +1,11 @@
 import React from "react";
 import Footer from "../Footer/Footer";
-import Nav from "../Nav/Nav";
+import NavBar from "../Nav/NavBar";
 
 export default function Layout(props) {
   return (
     <div>
-      <Nav />
+      <NavBar />
       <div>{props.children}</div>
       <Footer />
     </div>
