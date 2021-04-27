@@ -30,7 +30,18 @@ export default function Products(props) {
     <div>
       <Layout>
         <h1>All The Products</h1>
-        <div style={{ marginTop: "10px" }}>{productsJSX}</div>
+        <div
+          style={{
+            marginTop: "10px",
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            marginBottom: "100px",
+          }}
+        >
+          {productsJSX}
+        </div>
       </Layout>
     </div>
   );

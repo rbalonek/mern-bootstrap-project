@@ -5,7 +5,11 @@ import NavBar from "../Nav/NavBar";
 export default function Layout(props) {
   return (
     <div>
-      <NavBar />
+      <NavBar
+        isLoggedIn={props.isLoggedIn}
+        handleChangeLogout={props.handleChangeLogout}
+        handleChangeLogin={props.handleChangeLogin}
+      />
       <div>{props.children}</div>
       <Footer />
     </div>

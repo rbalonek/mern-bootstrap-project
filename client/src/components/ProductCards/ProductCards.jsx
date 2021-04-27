@@ -21,6 +21,9 @@ class ProductCards extends Component {
       .map((product, index) =>
         index < 8 ? (
           <ProductCard
+            isLoggedIn={this.props.isLoggedIn}
+            handleChangeLogout={this.props.handleChangeLogout}
+            handleChangeLogin={this.props.handleChangeLogin}
             _id={product._id}
             name={product.name}
             imgURL={product.imgURL}
