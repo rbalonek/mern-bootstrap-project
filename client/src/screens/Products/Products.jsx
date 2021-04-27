@@ -29,7 +29,8 @@ export default function Products(props) {
   return (
     <div>
       <Layout>
-        <div>{productsJSX}</div>
+        <h1>All The Products</h1>
+        <div style={{ marginTop: "10px" }}>{productsJSX}</div>
       </Layout>
     </div>
   );

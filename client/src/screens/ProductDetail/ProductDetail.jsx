@@ -24,7 +24,7 @@ const ProductDetail = (props) => {
 
   return (
     <Layout>
-      <div>
+      <div style={{ marginTop: "50px" }}>
         <img
           style={{ height: "100px" }}
           src={product.imgURL}
