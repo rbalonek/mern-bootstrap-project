@@ -2,13 +2,17 @@ import React, { useState, useEffect } from "react";
 import Layout from "../../components/shared/Layout/Layout";
 import { getProduct, deleteProduct } from "../../services/products";
 import { useParams, Link, useHistory } from "react-router-dom";
-import { Image } from "react-bootstrap";
+import { Image, Button, Modal } from "react-bootstrap";
 
 const ProductDetail = (props) => {
   const history = useHistory();
   const [product, setProduct] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
   const { id } = useParams();
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   let loggedIn = props.isLoggedIn;
 
@@ -29,6 +33,16 @@ const ProductDetail = (props) => {
 
   return (
     <Layout>
+      <Modal className="mt-5" show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Not available for purchase...YET!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>I might add a checkout feature soon.</Modal.Body>
+        <Button variant="dark" onClick={handleClose}>
+          Close
+        </Button>
+      </Modal>
+
       <div style={{ marginTop: "50px" }}>
         <div>
           <div className="d-flex flex-row-reverse justify-content-around ">
@@ -77,7 +91,7 @@ const ProductDetail = (props) => {
                 </>
               ) : (
                 <>
-                  <button className="btn btn-warning disabled">
+                  <button onClick={handleShow} className="btn btn-success ">
                     {" "}
                     Purchase{" "}
                   </button>
