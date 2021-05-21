@@ -46,17 +46,30 @@ class ProductCards extends Component {
           <h1 className="font-weight-light">LATEST</h1>
         </Jumbotron>
 
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            flexWrap: "wrap",
-            justifyContent: "center",
-          }}
-          className="cards"
-        >
-          {CARDS}
-        </div>
+        {CARDS.length ? (
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "center",
+            }}
+            className="cards"
+          >
+            {CARDS}
+          </div>
+        ) : (
+          <div
+            style={{
+              textAlign: "-webkit-center",
+              position: "relative",
+              top: "10vh",
+            }}
+          >
+            <p>Loading...</p>
+            <div className="spinner" />
+          </div>
+        )}
       </div>
     );
   }

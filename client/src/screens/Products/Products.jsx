@@ -70,18 +70,32 @@ const Products = (props) => {
         </Jumbotron>
         <Search onSubmit={handleSubmit} onChange={handleSearch} />
         <Sort onSubmit={handleSubmit} onChange={handleSort} />
-        <div
-          style={{
-            marginTop: "10px",
-            display: "flex",
-            flexDirection: "row",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            marginBottom: "100px",
-          }}
-        >
-          {productsJSX}
-        </div>
+
+        {productsJSX.length ? (
+          <div
+            style={{
+              marginTop: "10px",
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              marginBottom: "100px",
+            }}
+          >
+            {productsJSX}
+          </div>
+        ) : (
+          <div
+            style={{
+              textAlign: "-webkit-center",
+              position: "relative",
+              top: "10vh",
+            }}
+          >
+            <p>Loading...</p>
+            <div className="spinner" />
+          </div>
+        )}
       </Layout>
     </div>
   );
