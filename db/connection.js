@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 let MONGODB_URI =
   process.env.PROD_MONGODB ||
-  "mongodb+srv://Bob:Bob@cluster0.tpvhu.mongodb.net/mernProjPortfolio?retryWrites=true&w=majority";
+  "mongodb+srv://robertbalonek:Bdiddy12!@cluster0.z9sznmp.mongodb.net/test";
 mongoose
   .connect(MONGODB_URI, { useUnifiedTopology: true, useNewUrlParser: true })
   .then(() => console.log("Successfully connected to MongoDB."))
