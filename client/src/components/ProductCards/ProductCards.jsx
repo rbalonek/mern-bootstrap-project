@@ -66,7 +66,7 @@ class ProductCards extends Component {
               top: "10vh",
             }}
           >
-            <p>Loading...</p>
+            <p>Loading...<span style={{fontSize:'smaller'}}>(Waking up database usually takes about 30 secs)</span></p>
             <div className="spinner" />
           </div>
         )}

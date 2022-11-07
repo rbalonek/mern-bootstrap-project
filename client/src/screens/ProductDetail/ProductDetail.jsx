@@ -26,7 +26,7 @@ const ProductDetail = (props) => {
   }, [id]);
 
   if (!isLoaded) {
-    return <h1>Loading...</h1>;
+    return <h1>Loading...<span style={{fontSize:'smaller'}}>(Waking up database usually takes about 30 secs)</span></h1>;
   }
 
   // console.log(loggedIn);
